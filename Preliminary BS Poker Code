@@ -1,0 +1,121 @@
+import random
+import ipywidgets as widgets
+
+#Create a Card 
+class Card(object):
+    def __init__(self, value, suit):
+        self.value = value
+        self.suit = suit
+    def __repr__(self):
+        name = str(self.value) + " of " + self.suit
+        return name
+       
+#Create a deck of cards
+class DeckOfCards(list):
+    def __init__(self):
+        suit = ["Diamonds" , "Hearts" , "Clubs" , "Spades"]
+        value = {"Two":2,     #storing the values in dictionaries
+                 "Three":3,   #rank level of the card
+                 "Four":4,
+                 "Five":5,
+                 "Six":6,
+                 "Seven":7,
+                 "Eight":8,
+                 "Nine":9,
+                 "Ten":10,
+                 "Jack":11,
+                 "Queen":12,
+                 "King":13,
+                 "Ace":14}  #11,12,13,14 are jack queen king, and ace respectively
+        for num in value:
+            for s in suit:
+                self.append(Card(num, s))              
+#Shuffle the Deck
+def shuffleDeck(list):
+    random.shuffle(list)
+#pops the top card of the deck
+def deal(list):
+    return list.pop(0)
+#Player Class
+class Player(object):
+    def __init__(self):
+        self.hand = []
+        self.numCards = 2
+        
+        
+        
+ deck = DeckOfCards() #generate the deck of cards and immediately shuffling it
+shuffleDeck(deck)
+print(deck) #OUTPUT
+#[Three of Spades, Jack of Hearts, Eight of Clubs, King of Spades, Ace of Spades, Five of Diamonds, Two of Clubs, Eight of Diamonds,
+#Seven of Spades, Nine of Clubs, Six of Clubs, Nine of Diamonds, Six of Hearts, Ten of Hearts, Seven of Diamonds, Nine of Hearts, Eight of Hearts,
+#Queen of Diamonds, Ten of Clubs, King of Hearts, Ace of Diamonds, Six of Diamonds, Queen of Spades, Five of Spades, Seven of Clubs, Four of Hearts,
+#King of Diamonds, Ten of Spades, Eight of Spades, Four of Diamonds, Jack of Diamonds, Two of Spades, Ace of Hearts, Two of Diamonds, Nine of Spades,
+#Three of Diamonds, Jack of Spades, Queen of Hearts, Three of Hearts, King of Clubs, Ace of Clubs, Seven of Hearts, Five of Hearts, Two of Hearts, Jack of Clubs, 
+#Six of Spades, Queen of Clubs, Four of Spades, Four of Clubs, Five of Clubs, Ten of Diamonds, Three of Clubs]
+
+#using widget to allow user to change number of players
+playerCount = widgets.Dropdown(
+        options = [2,3,4,5,6],
+        value = 2,
+        description = "Players: ",
+        disabled = False,)
+display(playerCount)
+
+#Code here creates a button to allow to compiler to see how many players selected (Will be Implemented in final code)
+def makeGame():
+    pass
+def clickButton(b):
+    makeGame()
+acceptButton = widgets.Button(description='Submit # of Players', disabled=False,)
+acceptButton.on_click(clickButton)
+display(acceptButton)
+
+#make the number of players
+allPlayers = {}
+for e in range(playerCount.value):
+    pName = "Player" + str(e+1)
+    #allPlayers.update({pName: Player().hand})
+    allPlayers[pName] = {'hand':Player().hand , 'Number of Cards' : Player().numCards}
+
+print (allPlayers)
+#{'Player1': {'hand': [], 'Number of Cards': 2}, 'Player2': {'hand': [], 'Number of Cards': 2}, 'Player3': {'hand': [], 'Number of Cards': 2}}
+
+#Takes the number of players and deals the appropriate number of cards to each player
+def dealToAllPlayers():
+    count = 1
+    for player in allPlayers:
+        for e in range(allPlayers[player]['Number of Cards']):
+            allPlayers[player]['hand'].append(deal(deck)) #appends the top card into the all Players dictionary
+        count += 1
+
+dealToAllPlayers()
+print(allPlayers)
+#{'Player1': {'hand': [Three of Spades, Jack of Hearts], 'Number of Cards': 2}, 'Player2': {'hand': [Eight of Clubs, King of Spades], 
+#'Number of Cards': 2}, 'Player3': {'hand': [Ace of Spades, Five of Diamonds], 'Number of Cards': 2}}
+
+#put all cards in one list to be judged for poker hands
+def combineCards():
+    allCards = []
+    for e in allPlayers:
+        allCards = allCards + allPlayers[e]['hand']
+    return allCards
+combineCards()
+
+#[Three of Spades, Jack of Hearts, Eight of Clubs, King of Spades, Ace of Spades, Five of Diamonds]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
