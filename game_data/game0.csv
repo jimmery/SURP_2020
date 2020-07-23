@@ -1,0 +1,18 @@
+,Hand,Calls,Called Bluff?,AI Player
+Player1,"[Card('3♦'), Card('5♥')]",['High Card of 5'],True,True
+Player2,"[Card('K♣'), Card('4♣')]",['High Card of K'],False,False
+Round finished. ,--,--,--,--
+Player1,"[Card('5♦'), Card('9♠'), Card('T♥')]",['High Card of T'],True,True
+Player2,"[Card('K♦'), Card('8♣')]",['High Card of K'],False,False
+Round finished. ,--,--,--,--
+Player1,"[Card('A♥'), Card('K♠'), Card('3♠'), Card('8♥')]",['High Card of A'],True,True
+Player2,"[Card('9♥'), Card('5♠')]",['Pair of 9'],False,False
+Round finished. ,--,--,--,--
+Player1,"[Card('J♠'), Card('9♣'), Card('Q♣'), Card('8♦')]",['High Card of Q'],True,True
+Player2,"[Card('J♣'), Card('6♠'), Card('7♣')]",['Pair of Q'],False,False
+Round finished. ,--,--,--,--
+Player1,"[Card('T♣'), Card('A♦'), Card('J♥'), Card('6♣')]",['High Card of A'],True,True
+Player2,"[Card('K♥'), Card('T♦'), Card('6♦'), Card('J♦')]",['Pair of A'],False,False
+Round finished. ,--,--,--,--
+Player1,"[Card('Q♦'), Card('7♠'), Card('A♣'), Card('9♦')]",['High Card of A'],True,True
+Round finished. ,--,--,--,--

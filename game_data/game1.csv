@@ -1,0 +1,12 @@
+,Hand,Calls,Called Bluff?,AI Player
+Player1,"[Card('4♠'), Card('K♥')]","['High Card of K', 'Straight Flush of ♣ to 2']",False,True
+Player2,"[Card('9♣'), Card('9♠')]",['Pair of 9'],True,False
+Round finished. ,--,--,--,--
+Player1,"[Card('T♣'), Card('J♥'), Card('6♦')]","['High Card of J', 'Straight Flush of ♣ to 2']",False,True
+Player2,"[Card('4♦'), Card('Q♣')]",['High Card of Q'],True,False
+Round finished. ,--,--,--,--
+Player1,"[Card('6♠'), Card('7♦'), Card('5♦'), Card('J♦')]","['High Card of J', 'Straight Flush of ♣ to 2']",False,True
+Player2,"[Card('2♠'), Card('A♠')]",['Pair of A'],True,False
+Round finished. ,--,--,--,--
+Player2,"[Card('3♣'), Card('8♦')]",['Pair of 3'],True,False
+Round finished. ,--,--,--,--

@@ -1,0 +1,15 @@
+,Hand,Calls,Called Bluff?,AI Player
+Player1,"[Card('A♦'), Card('7♦')]","['High Card of A', 'Straight Flush of ♣ to 2']",False,True
+Player2,"[Card('T♥'), Card('6♠')]",['Pair of 6'],True,False
+Round finished. ,--,--,--,--
+Player1,"[Card('3♥'), Card('K♥'), Card('A♥')]","['High Card of A', 'Pair of A', 'Straight Flush of ♣ to 2']",False,True
+Player2,"[Card('Q♠'), Card('9♠')]","['Pair of Q', 'Two Pair of  A & Q']",True,False
+Round finished. ,--,--,--,--
+Player1,"[Card('3♦'), Card('T♦'), Card('4♦'), Card('7♣')]","['High Card of T', 'Straight Flush of ♣ to 2']",False,True
+Player2,"[Card('5♦'), Card('4♠')]",['Pair of T'],True,False
+Round finished. ,--,--,--,--
+Player1,"[Card('6♥'), Card('Q♥'), Card('2♣'), Card('K♠'), Card('T♠')]","['High Card of K', 'Pair of A', 'Three of a Kind of 7']",False,True
+Player2,"[Card('J♣'), Card('6♦')]","['Pair of K', 'Two Pair of  A & K']",True,False
+Round finished. ,--,--,--,--
+Player2,"[Card('7♠'), Card('9♦')]","['Pair of 9', 'Two Pair of  J & 9']",True,False
+Round finished. ,--,--,--,--
